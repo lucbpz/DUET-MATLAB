@@ -91,11 +91,11 @@ end
 
 mask=[];
 overlap2=0.75*windowsize;
-row=zeros(1,length(x1)+2*windowsize);
 
 for i = 1:numfuentes
     mask=squeeze(iminimos==i);
-    
+    row=zeros(1,length(x1)+2*windowsize);
+
     fuenteest=(tf1+a_p(i)*exp(sqrt(-1)*fmat*delta_p(i)).*tf2)./(1+a_p(i)^2);
     fuenteest=fuenteest.*squeeze(mask);
     
